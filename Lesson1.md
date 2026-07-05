@@ -87,3 +87,5 @@ TL: 	y = 1*1 + 5*1 + 8*1 + 9*1 - 10 = 13 > 0 => đi
 - Giải thích:
 	+ Khi y > 0: hàm kích hoạt bật đèn xanh => quyết định đi xem phim
 	+ Khi y < 0: hàm kích hotaj đèn đỏ => quyết định không đi xem phim
+
+https://playground.tensorflow.org/
