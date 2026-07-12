@@ -1,5 +1,5 @@
 # 1. Artificial Intelligence (AI)
-- Trí tuệ nhân tập: chat gpt, gemini, face recognition, autopilot,..
+- Trí tuệ nhân tạo: chat gpt, gemini, face recognition, autopilot,..
 - Trí tuệ là khả năng:
  nhận thức -> suy luận -> lưu trữ -> áp dụng
 - Ví dụ 1: dạy một em bé nhận biết con mèo
