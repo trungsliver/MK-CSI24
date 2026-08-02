@@ -195,3 +195,7 @@ elif menu == "Danh sách":
     else:
 
         st.warning("Chưa có dữ liệu.")
+
+# ==================== HƯỚNG DẪN ==========================
+# Chạy file:  streamlit run app.py   
+# Tải thư viện: pip install streamlit tensorflow pillow numpy PTL
