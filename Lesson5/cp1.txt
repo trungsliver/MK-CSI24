@@ -1,0 +1,12 @@
+Quy tắc đặt tên file cho CP1: [TenLop]_[HoTen]_CP1
+Ví dụ: CSI24_BuiDucTrung_CP1
+
+Làm bài trên kaggle notebook nhé
+
+Link đề bài: shorturl.at/m6yC8
+
+Kết quả
+Duy Anh: 9/10   7/10    = 8
+Lâm Khánh: 9/10     8/10 = 8.5
+Tuấn Linh: 9/10 9/10 = 9
+Minh Anh: 9/10 7/10 = 8
