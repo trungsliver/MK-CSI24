@@ -36,3 +36,51 @@ def csi24_chatbot():
     st.title("CSI24 Chatbot")
      # tin nhắn mặc định
     st.write(initial_bot_message)
+    # Tin nhắn gợi ý chức năng
+    st.write("""Các chức năng bạn có thể hỏi tôi:
+    1. Giới thiệu về lớp MK-CSI24
+    2. Giới thiệu menu của lớp
+    """)
+
+    # Nếu chưa có lịch sử trò chuyện
+    if 'conversation_log' not in st.session_state:
+        st.session_state.conversation_log = [
+            {"role": "assistant", "content": initial_bot_message}
+        ]
+
+     # Nếu đã có lịch sử trò chuyện, hiển thị lịch sử ra màn hình
+    for message in st.session_state.conversation_log:
+        if message["role"] != "system":
+            with st.chat_message(message["role"]):
+                st.write(message["content"])
+
+    # Khi người dùng nhập prompt
+    if prompt := st.chat_input("Nhập yêu cầu của bạn tại đây..."):
+        # Hiển thị prompt của người dùng ra màn hình
+        with st.chat_message("user"):
+            st.write(prompt)
+        # Thêm vào log
+        st.session_state.conversation_log.append({"role": "user", "content": prompt})
+
+        # LLM tạo câu trả lời
+        response = model.generate_content(prompt)
+        bot_reply = response.text
+
+        # Kiểm tra xem prompt có đề cập menu không
+        if "menu" in prompt.lower() or "món" in prompt.lower():
+            bot_reply = '\n\n'.join([f"**{row['name']}**: {row['description']}" for idx, row in menu_df.iterrows()])
+        else:
+            response = model.generate_content(prompt)
+            bot_reply = response.text
+
+        # Hiển thị câu trả lời từ LLM
+        with st.chat_message("assistant"):
+            st.write(bot_reply)
+        # và thêm vào log
+        st.session_state.conversation_log.append({"role": "assistant", "content": bot_reply})
+
+    #### Chạy chương trình ###
+if __name__ == "__main__":
+    csi24_chatbot()
+
+# Câu lệnh chạy: streamlit run app.py
