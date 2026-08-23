@@ -1,0 +1,7 @@
+{
+    "initial_bot_message": "Chào bạn, tôi là CSI24_Bot. Tôi có thể giúp bạn điều gì?",
+    "function": [
+        "Giới thiệu về lớp MK-CSI24",
+        "Giới thiệu menu của lớp"
+    ]
+}
