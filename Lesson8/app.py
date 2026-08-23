@@ -83,4 +83,6 @@ def csi24_chatbot():
 if __name__ == "__main__":
     csi24_chatbot()
 
-# Câu lệnh chạy: streamlit run app.py
+# Cách chạy: 
+    # Chuột phải vào folder Lesson8, chọn "Open in Terminal"
+    # streamlit run app.py
