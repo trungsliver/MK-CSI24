@@ -1,0 +1,47 @@
+# GỢI Ý Ý TƯỞNG SẢN PHẨM CUỐI KHÓA - COMPUTER SCIENTIST (INTENSIVE)
+
+1. Trợ lý Chẩn đoán & Tư vấn Sức khỏe Cây trồng / Thú cưng
+* Ý tưởng: Ứng dụng giúp người dùng tải ảnh mô tả tình trạng lá cây hoặc thú cưng bị bệnh để nhận kết quả phân loại, đồng thời trò chuyện với Chatbot để nhận lời khuyên xử lý.
+* Kiến thức áp dụng:
+  - Mô hình dự đoán hình ảnh: Sử dụng Deep Learning (hoặc Teachable Machine / Custom CNN) để phân loại ảnh bệnh.
+  - AI API & Chatbot: Kết nối Gemini API hoặc Groq API (miễn phí, tốc độ rất nhanh) để giải thích kết quả và đóng vai "bác sĩ cây trồng/thú cưng".
+  - Prompt Engineering: Thiết lập System Prompt để Chatbot trả lời ngắn gọn, chuẩn y khoa/nông nghiệp và có thái độ thân thiện.
+* Nguồn dữ liệu / API gợi ý:
+  - Dataset: Kaggle (Bộ dữ liệu PlantVillage cho bệnh cây trồng, hoặc Dog/Cat Skin Disease Dataset).
+  - API: Gemini API (Google AI Studio) hoặc Groq Cloud API (miễn phí cho học sinh demo).
+
+2. Hệ thống Phân tích Cảm xúc & Tóm tắt Ý kiến Khách hàng (Sentiment & Insight Analyzer)
+* Ý tưởng: Cho phép người dùng dán một đoạn đánh giá sản phẩm/bài viết báo chí hoặc tải file CSV. Hệ thống sẽ dự đoán cảm xúc (Tích cực / Tiêu cực / Trung tính), tóm tắt các điểm chính và đưa ra gợi ý cải thiện qua Chatbot.
+* Kiến thức áp dụng:
+  - Mô hình dự đoán văn bản: Xây dựng hoặc fine-tune mô hình Machine Learning/NLP phân loại cảm xúc từ dữ liệu bài viết, đánh giá.
+  - AI API & Prompt Engineering: Dùng LLM API tóm tắt các ý kiến chính và đề xuất giải pháp chăm sóc khách hàng tự động.
+  - Giao diện Streamlit: Hiển thị biểu đồ thống kê (Chart) bằng matplotlib hoặc plotly kết hợp bảng kết quả.
+* Nguồn dữ liệu / API gợi ý:
+  - Dataset: Kaggle (Amazon Reviews, Twitter Sentiment Dataset hoặc bộ dữ liệu Shopee Reviews tiếng Việt).
+  - API: Cohere API hoặc Hugging Face Inference API (miễn phí).
+
+3. Trợ lý Học tập Smart Tutor (Hỏi-Đáp Tài liệu + Tạo Bài kiểm tra)
+* Ý tưởng: Ứng dụng hỗ trợ học sinh học tập bằng cách nạp tài liệu (văn bản/hình ảnh bài tập). AI sẽ nhận diện, giải bài và tạo ra các câu hỏi trắc nghiệm ôn tập tương ứng.
+* Kiến thức áp dụng:
+  - Xử lý Hình ảnh / OCR: Nhận diện chữ hoặc dạng bài tập từ ảnh chụp.
+  - Chatbot & Prompt Engineering: Xây dựng Chatbot nhập vai "Socrates Tutor" – không cho đáp án ngay mà gợi ý từng bước tư duy thông qua kỹ thuật Few-shot / Chain-of-Thought Prompting.
+  - Streamlit: Sử dụng các thành phần giao diện như st.file_uploader, st.chat_input, st.radio để làm giao diện trắc nghiệm tương tác.
+* Nguồn dữ liệu / API gợi ý:
+  - API: OpenRouter (dùng các model free như Mistral 7B hay Qwen), Gemini Vision API.
+
+4. Ứng dụng Phân loại & Gợi ý Phong cách Thời trang / Đồ ăn
+* Ý tưởng: Người dùng tải ảnh trang phục hoặc món ăn trong tủ lạnh, mô hình sẽ phân loại đối tượng và đề xuất cách phối đồ hoặc công thức nấu ăn phù hợp.
+* Kiến thức áp dụng:
+  - Mô hình dự đoán hình ảnh: Huấn luyện mô hình phân loại loại trang phục (Áo, Quần, Đầm...) hoặc nguyên liệu thực phẩm.
+  - AI API & Chatbot: Truyền danh sách nguyên liệu/trang phục đã nhận diện vào LLM để sinh ra công thức nấu ăn hoặc phong cách phối đồ kèm lời khuyên.
+  - Streamlit: Hiển thị thẻ thông tin (Cards), ảnh gợi ý và ô chat tư vấn trực tiếp.
+* Nguồn dữ liệu / API gợi ý:
+  - Dataset: Kaggle (Fashion MNIST, Food-101 Dataset).
+  - API: Hugging Face Hub (Sử dụng các mô hình Image Classification có sẵn nếu muốn mở rộng).
+
+--------------------------------------------------------------------------------
+
+💡 Lưu ý:
+1. Kiến trúc mạch lạc: Giao diện Streamlit cần chia rõ 2 phần: Phần Phân loại/Dự đoán (Image/Text Model) và Phần Trợ lý AI Tư vấn (Chatbot API).
+2. Kỹ thuật Prompting: Hãy viết và tối ưu hóa System Prompt cẩn thận để AI trả lời đúng trọng tâm và không bị vi phạm chuẩn mực/đưa thông tin sai lệch.
+3. Nguồn dữ liệu & API: Nên ưu tiên lấy dữ liệu sạch từ Kaggle và đăng ký key API miễn phí từ Google AI Studio (Gemini) hoặc Groq Cloud để đảm bảo ứng dụng chạy mượt mà khi thuyết trình.
