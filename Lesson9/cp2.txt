@@ -1,0 +1,6 @@
+Quy tắc đặt tên file cho CP1: [TenLop]_[HoTen]_CP2
+Ví dụ: CSI24_BuiDucTrung_CP2
+
+Làm bài trên kaggle notebook nhé
+
+Link đề bài: https://shorturl.at/DCkUY
